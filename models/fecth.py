@@ -8,13 +8,13 @@ def main(output_csv: str):
     data = load_digits(as_frame=True)
     X = data.data.copy()
     y = data.target
-    df = X.assing(target=y)
+    df = X.assign(target=y)
     df.to_csv(output_csv, index=False)
     print(f"Dataset crudo guardado en {output_csv} (shape={df.shape})")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--out", default="data/raw/iris.csv",
+    parser.add_argument("--out", default="data/raw/digits.csv",
                         help="Ruta de salida CSV crudo")
     args = parser.parse_args()
     main(args.out)
