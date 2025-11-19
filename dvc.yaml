@@ -1,5 +1,5 @@
 stages:
   fecth:
-    cmd: python models
+    cmd: python models/fetch.py --outs data/raw/digits.csv
     outs:
     - data/raw/digits.csv
