@@ -1,0 +1,5 @@
+stages:
+  fecth:
+    cmd: python models
+    outs:
+    - data/raw/digits.csv
